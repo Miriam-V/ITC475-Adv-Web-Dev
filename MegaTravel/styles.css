@@ -25,6 +25,16 @@ body {
     display: inline;
   }
 
+  a { 
+    color: black;
+    text-decoration: none;
+    transition: all .5s linear;
+  }
+
+  a:hover {
+    color: orange;
+  }
+
   
 
   
