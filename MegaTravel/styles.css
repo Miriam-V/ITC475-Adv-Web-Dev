@@ -39,6 +39,11 @@ body {
     transform: translateY(-10px);
   }
 
+  #introHeadingAndText {
+    padding: 1%;
+    padding-top: 0%;
+  }
+
   
 
   
