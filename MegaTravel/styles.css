@@ -44,6 +44,8 @@ body {
     padding-top: 0%;
   }
 
+/***********************Footer**********************************************/
+
   footer {
     background-color: black;
     color: white;
@@ -53,9 +55,27 @@ body {
     line-height: 0.3;
   }
   
+/**************************Image Gallery***********************************/
 
-  .profileBlock {
-    width: 25%;
-    text-align: center;
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    grid-gap: 15px;
   }
+  
+  .profileBlock {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+  }
+
+  .profileBlock:hover {
+    background-color: black;
+    transition: all 1.5s ease;
+    color: white;
+  }
+
+
+
   
