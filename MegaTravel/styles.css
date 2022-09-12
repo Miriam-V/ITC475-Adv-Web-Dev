@@ -1,3 +1,4 @@
+/*************************Header w/ the Logo**********************************/
 body {
     background-color: white;
     margin: 0%;
@@ -10,10 +11,12 @@ body {
   }
 
   #headerSeparator {
+    height: 3vh;
     width: auto;
-    height: 25px;
     background-color: lightgray;
   }
+
+/**************************Navigation Bar**********************************/
 
   #mainNavigationBar {
     list-style-type: none;
@@ -23,7 +26,7 @@ body {
 
   li {
     display: inline;
-    padding: 10px;
+    padding: 1vw;
   }
 
   a { 
@@ -36,8 +39,10 @@ body {
   a:hover {
     color: orange;
     transition: all .2s linear;
-    transform: translateY(-10px);
+    transform: translateY(-1vw);
   }
+
+/*************************Intro heading and Text*****************************/
 
   #introHeadingAndText {
     padding: 1%;
@@ -52,7 +57,7 @@ body {
     padding-left: 3%;
     padding-top: 0.10%;
     padding-bottom: 1%;
-    line-height: 0.3;
+    line-height: 0%;
   }
   
 /**************************Image Gallery***********************************/
@@ -60,14 +65,14 @@ body {
   .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    padding: 10px;
-    grid-gap: 15px;
+    padding: 1%;
+    grid-gap: 1%;
   }
   
   .profileBlock {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    border: 0.10vw solid rgba(0, 0, 0, 0.8);
+    padding: 3%;
   }
 
   .profileBlock:hover {
