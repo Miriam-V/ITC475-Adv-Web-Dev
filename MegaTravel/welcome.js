@@ -1,9 +1,12 @@
 // Display current time
-let currentTime = new Date();
-let time = currentTime.toLocaleString();
-var displayCurrentTime = document.getElementById("currentTime").innerHTML = time;
+window.onload = displayLiveTime();
+function displayLiveTime(){
+   var display = new Date().toLocaleTimeString();
+   document.getElementById("currentTime").innerHTML = display;
+   setTimeout(displayLiveTime, 1000); 
+}
 
-
+// Variables for the full greeting (greeting and visual icon)
 var hours = new Date().getHours();
 var fullGreeting = document.getElementById("welcomeMessage");
 var greeting = "";
