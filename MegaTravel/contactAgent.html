@@ -9,9 +9,11 @@
     </head>
     <body>
         <!--Header w/the logo-->
-        <h1>
+        <div class="headerGridContainer">
+            <p id="currentTime"></p> <!--Javascript Greeting AKA Good Morning, Good Afternoon, or "Good Evening"-->
+            <p id="welcomeMessage"></p>
             <img src="site_files/mega_travel_logo.png" alt="Mega Travel Logo" class="logo"/>
-        </h1>
+        </div>
         <div id="headerSeparator"></div>
         <!--Navigation Bar-->
         <ul id="mainNavigationBar">
@@ -34,5 +36,7 @@
             <p>MEGA TRAVELS</p>
             <p>mega@travels.com</p>
         </footer>
+        <!--Javascript reference-->
+        <script src="welcome.js"></script>
     </body>
 </html>
