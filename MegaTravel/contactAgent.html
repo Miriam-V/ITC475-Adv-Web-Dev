@@ -30,69 +30,88 @@
             </p>
         </div>
         <!--Activities Selector-->
-        <form>
-            <p>Select a Destination:</p>
-            <select name="selectedDestination" id="selectedDestination" onchange="activitiesFunction()">
-              <option value="newzealand" id="newzealand">New Zealand</option>
-              <option value="maldives" id="maldives">Maldives, South Asia</option>
-              <option value="venice">Venice, Italy</option>
-              <option value="cancun">Cancun</option>
-            </select>
-            <br><br>
+        <form id="reservationForm">
+            <p>First Name:</p>
+            <input type="text" id="fname" name="fname">
+            <p>Last Name:</p>
+            <input type="text" id="lname" name="lname">
+            <p>Email Address:</p>
+            <input type="email" id="email" name="email">
+            <p>Phone Number:</p>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+            <p>How many children and adults are traveling?</p>
+            <input type="number" id="quantity" name="quantity" min="1">
+            <p>Start Date:<p>
+            <input type="date" id="sDate" name="sDate">
+            <p>End Date:<p>
+            <input type="date" id="eDate" name="eDate">
+            <div id="selectDestination">
+                <p>Select a Destination:</p>
+                <select name="selectedDestination" id="selectedDestination" onchange="activitiesFunction()">
+                <option value="newzealand" id="newzealand">New Zealand</option>
+                <option value="maldives" id="maldives">Maldives, South Asia</option>
+                <option value="venice">Venice, Italy</option>
+                <option value="cancun">Cancun</option>
+                </select>
+                <br><br>
+            </div>
+            <div id="newZealandActivities" style="display: block;">
+                <p>Select Activities:</p>
+                <input type="checkbox" id="nzCityTours" name="nzCityTours" value="nzActivity">
+                <label for="nzCityTours">City Tours</label><br>
+                <input type="checkbox" id="nzSports" name="nzSports" value="nzActivity">
+                <label for="nzSports">Sports</label><br>
+                <input type="checkbox" id="nzCycling" name="nzCycling" value="nzActivity">
+                <label for="nzCycling">Cycling</label><br>
+                <input type="checkbox" id="nzMuseums" name="nzMuseums" value="nzActivity">
+                <label for="nzMuseums">Museums</label><br>
+                <input type="checkbox" id="nzBoating" name="nzBoating" value="nzActivity">
+                <label for="nzBoating">Boating</label>
+                <br><br>
+            </div>
+            <div id="maldivesActivities" style="display: none;">
+                <p>Select Activities:</p>
+                <input type="checkbox" id="mMuseums" name="mMuseums" value="mActivity">
+                <label for="mMuseums">Museums</label><br>
+                <input type="checkbox" id="mSailing" name="mSailing" value="mActivity">
+                <label for="mSailing">Sailing</label><br>
+                <input type="checkbox" id="mBeach" name="mBeach" value="mActivity">
+                <label for="mBeach">Beach</label><br>
+                <input type="checkbox" id="mHiking" name="mHiking" value="mActivity">
+                <label for="mHiking">Hiking</label><br>
+                <input type="checkbox" id="mBoating" name="mBoating" value="mActivity">
+                <label for="mBoating">Boating</label>
+                <br><br>
+            </div>
+            <div id="veniceActivities" style="display: none;">
+                <p>Select Activities:</p>
+                <input type="checkbox" id="vMuseums" name="vMuseums" value="vActivity">
+                <label for="vMuseums">Museums</label><br>
+                <input type="checkbox" id="vTheatre" name="vTheatre" value="vActivity">
+                <label for="vTheatre">Theatre</label><br>
+                <input type="checkbox" id="vParks" name="vParks" value="vActivity">
+                <label for="vParks">Parks and Recreation</label><br>
+                <input type="checkbox" id="vCityTours" name="vCityTours" value="vActivity">
+                <label for="vCityTours">City Tours</label>
+                <br><br>
+            </div>
+            <div id="cancunActivities" style="display: none;">
+                <p>Select Activities:</p>
+                <input type="checkbox" id="cParks" name="cParks" value="cActivity">
+                <label for="cParks">Parks and Recreation</label><br>
+                <input type="checkbox" id="cBeaches" name="cBeaches" value="cActivity">
+                <label for="cBeaches">Beaches</label><br>
+                <input type="checkbox" id="cBoating" name="cBoating" value="cActivity">
+                <label for="cBoating">Boating</label><br>
+                <input type="checkbox" id="cSnorkeling" name="cSnorkeling" value="cActivity">
+                <label for="cSnorkeling">Snorkeling</label>
+                <br><br>
+            </div>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit" id="Submit">
         </form>
-        <form id="newZealandActivities" style="display: block;">
-            <p>Select Activities:</p>
-            <input type="checkbox" id="nzCityTours" name="nzCityTours" value="nzActivity">
-            <label for="nzCityTours">City Tours</label><br>
-            <input type="checkbox" id="nzSports" name="nzSports" value="nzActivity">
-            <label for="nzSports">Sports</label><br>
-            <input type="checkbox" id="nzCycling" name="nzCycling" value="nzActivity">
-            <label for="nzCycling">Cycling</label><br>
-            <input type="checkbox" id="nzMuseums" name="nzMuseums" value="nzActivity">
-            <label for="nzMuseums">Museums</label><br>
-            <input type="checkbox" id="nzBoating" name="nzBoating" value="nzActivity">
-            <label for="nzBoating">Boating</label>
-            <br><br>
-        </form>
-        <form id="maldivesActivities" style="display: none;">
-            <p>Select Activities:</p>
-            <input type="checkbox" id="mMuseums" name="mMuseums" value="mActivity">
-            <label for="mMuseums">Museums</label><br>
-            <input type="checkbox" id="mSailing" name="mSailing" value="mActivity">
-            <label for="mSailing">Sailing</label><br>
-            <input type="checkbox" id="mBeach" name="mBeach" value="mActivity">
-            <label for="mBeach">Beach</label><br>
-            <input type="checkbox" id="mHiking" name="mHiking" value="mActivity">
-            <label for="mHiking">Hiking</label><br>
-            <input type="checkbox" id="mBoating" name="mBoating" value="mActivity">
-            <label for="mBoating">Boating</label>
-            <br><br>
-        </form>
-        <form id="veniceActivities" style="display: none;">
-            <p>Select Activities:</p>
-            <input type="checkbox" id="vMuseums" name="vMuseums" value="vActivity">
-            <label for="vMuseums">Museums</label><br>
-            <input type="checkbox" id="vTheatre" name="vTheatre" value="vActivity">
-            <label for="vTheatre">Theatre</label><br>
-            <input type="checkbox" id="vParks" name="vParks" value="vActivity">
-            <label for="vParks">Parks and Recreation</label><br>
-            <input type="checkbox" id="vCityTours" name="vCityTours" value="vActivity">
-            <label for="vCityTours">City Tours</label>
-            <br><br>
-        </form>
-        <form id="cancunActivities" style="display: none;">
-            <p>Select Activities:</p>
-            <input type="checkbox" id="cParks" name="cParks" value="cActivity">
-            <label for="cParks">Parks and Recreation</label><br>
-            <input type="checkbox" id="cBeaches" name="cBeaches" value="cActivity">
-            <label for="cBeaches">Beaches</label><br>
-            <input type="checkbox" id="cBoating" name="cBoating" value="cActivity">
-            <label for="cBoating">Boating</label><br>
-            <input type="checkbox" id="cSnorkeling" name="cSnorkeling" value="cActivity">
-            <label for="cSnorkeling">Snorkeling</label>
-            <br><br>
-        </form>
-        <br><br>
+        <br>
+        <br>
         <!--Footer-->
         <footer>
             <p>Copyright Protected. All rights reserved.</p>
@@ -103,5 +122,6 @@
         <!--Javascript reference-->
         <script src="welcome.js"></script>
         <script src="activities.js"></script>
+        <script src="onsubmit.js"></script>
     </body>
 </html>

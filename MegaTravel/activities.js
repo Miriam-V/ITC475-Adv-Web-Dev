@@ -82,3 +82,9 @@ function clearCancunActivities() {
     document.getElementById("cBoating").checked = false;
     document.getElementById("cSnorkeling").checked = false;
 }
+
+
+
+
+
+
