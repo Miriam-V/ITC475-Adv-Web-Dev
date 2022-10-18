@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <head lang="en">
+        <title>Smart Home - Panel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Miriam Vera">
+        <link rel="stylesheet" type="text/css" href="styles.css" /> 
+    </head>
+    <body>
+        <h1>Smart Home</h1>
+        <div class="topnav">
+            <a href="index.html">Smart Home Panel</a>
+            <a href="settings.html">Smart Home Settings</a>
+        </div>
+        <br>
+        <br>
+        <form>
+            <label for="smartDevices">Select a Smart Home Device:</label>
+            <select name="smartDevices" id="smartDevices">
+              <option value="LivingRoomLamp">Living Room Lamp</option>
+              <option value="Bedroom1DeskLamp">Bedroom # 1 Desk Lamp</option>
+              <option value="Bedroom2FloorLamp">Bedroom # 2 Floor Lamp</option>
+              <option value="BathroomFan">Bathroom Fan</option>
+              <option value="Washer">Washer</option>
+              <option value="Dryer">Dryer</option>
+              <option value="FrontDoor">Front Door</option>
+              <option value="BackDoor">Back Door</option>
+              <option value="GarageDoor">Garage Door</option>
+              <option value="KitchenFan">Kitchen Fan</option>
+              <option value="DiningRoomLight">Dining Room Light</option>
+            </select>
+            <br><br>
+            <label>Start Time: </label>
+                <input id="startTime" type="time" name="startTime" />
+            <label>End Time: </label>
+                <input id="endTime" type="time" name="endTime" />
+            <br><br>
+            <input type="submit" value="Submit" id="Submit" onclick="setItems()">
+        </form>
+        <!--Javascript reference-->
+        <script src="simulator.js"></script>
+    </body>
+</html>
