@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <head lang="en">
+        <title>Smart Home - Settings</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Miriam Vera">
+        <link rel="stylesheet" type="text/css" href="styles.css" /> 
+    </head>
+    <body>
+        <h1>Smart Home</h1>
+        <div class="topnav">
+            <a href="index.html">Smart Home Panel</a>
+            <a href="#news">Smart Home Settings</a>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item1">
+                Living Room Lamp
+                <br>
+                <img src="images/light.png" alt="lightbulb icon" width="70em" height="70em">
+                <p id="LivingRoomLamp_Status">Status: OFF</p>
+            </div>
+            <div class="grid-item2">Bedroom # 1 Desk Lamp
+                <br>
+                <img src="images/light.png" alt="lightbulb icon" width="70em" height="70em">
+                <p id="Bedroom1DeskLamp_Status">Status: OFF</p>
+            </div>
+            <div class="grid-item3">Bedroom # 2 Floor Lamp
+                <br>
+                <img src="images/light.png" alt="lightbulb icon" width="70em" height="70em">
+                <p id="Bedroom2FloorLamp_Status">Status: OFF</p>
+            </div>  
+            <div class="grid-item4">Bathroom Fan
+                <br>
+                <img src="images/fan.png" alt="fan icon" width="70em" height="70em">
+                <p id="BathroomFan_Status">Status: OFF</p>
+            </div>
+            <div class="grid-item5">Washer
+                <br>
+                <img src="images/washer.png" alt="washer icon" width="70em" height="70em">
+                <p id="Washer_Status" >Status: OFF</p>
+            </div>
+            <div class="grid-item6">Dryer
+                <br>
+                <img src="images/dryer.png" alt="dryer icon" width="70em" height="70em">
+                <p id="Dryer_Status">Status: OFF</p>
+            </div>  
+            <div class="grid-item7">Front Door
+                <br>
+                <img src="images/door.png" alt="door icon" width="70em" height="70em">
+                <p FrontDoor_Status>Status: OFF</p>
+            </div>
+            <div class="grid-item8">Back Door
+                <br>
+                <img src="images/door.png" alt="door icon" width="70em" height="70em">
+                <p id="BackDoor_Status">Status: OFF</p>
+            </div>
+            <div class="grid-item9">Garage Door
+                <br>
+                <img src="images/garage_door.png" alt="garage door icon" width="70em" height="70em">
+                <p id="GarageDoor_Status">Status: OFF</p>
+            </div> 
+            <div class="grid-item10">Kitchen Fan
+                <br>
+                <img src="images/fan.png" alt="fan icon" width="70em" height="70em">
+                <p id="KitchenFan_Status">Status: OFF</p>
+            </div>
+            <div class="grid-item11">Dining Room Light
+                <br>
+                <img src="images/light.png" alt="lightbulb icon" width="70em" height="70em">
+                <p id="DiningRoomLight_Status">Status: OFF</p>
+            </div>
+            <div class="grid-item12"></div>  
+          </div>
+        
+        <p>Current Time: </p>
+        <p id="currentTimeLabel">[Hours:Minutes]</p>
+        <button type="button" id="btn_Run" onclick="runTime()">Run</button>
+        <!--Javascript reference-->
+        <script src="simulator.js"></script>
+    </body>
+</html>
