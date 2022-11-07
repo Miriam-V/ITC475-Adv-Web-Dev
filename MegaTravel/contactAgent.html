@@ -30,7 +30,7 @@
             </p>
         </div>
         <!--Activities Selector-->
-        <form id="reservationForm">
+        <form id="reservationForm" action="confirm.php" method="post">
             <p>First Name:</p>
             <input type="text" id="fname" name="fname">
             <p>Last Name:</p>
@@ -48,62 +48,62 @@
             <div id="selectDestination">
                 <p>Select a Destination:</p>
                 <select name="selectedDestination" id="selectedDestination" onchange="activitiesFunction()">
-                <option value="newzealand" id="newzealand">New Zealand</option>
-                <option value="maldives" id="maldives">Maldives, South Asia</option>
-                <option value="venice">Venice, Italy</option>
-                <option value="cancun">Cancun</option>
+                    <option value="newzealand" New Zealand id="newzealand" name="newzealand">New Zealand</option>
+                    <option value="maldives" id="maldives" name="maldives">Maldives, South Asia</option>
+                    <option value="venice" id="venice" name="venice">Venice, Italy</option>
+                    <option value="cancun" Cancun id="cancun" name="cancun">Cancun</option>
                 </select>
                 <br><br>
             </div>
-            <div id="newZealandActivities" style="display: block;">
+            <div id="newZealandActivities" name="newZealandActivities" style="display: block;">
                 <p>Select Activities:</p>
-                <input type="checkbox" id="nzCityTours" name="nzCityTours" value="nzActivity">
+                <input type="checkbox" id="nzCityTours" name="checkboxNZ[]" value="City Tours" City Tours>
                 <label for="nzCityTours">City Tours</label><br>
-                <input type="checkbox" id="nzSports" name="nzSports" value="nzActivity">
+                <input type="checkbox" id="nzSports" name="checkboxNZ[]" value="Sports" Sports>
                 <label for="nzSports">Sports</label><br>
-                <input type="checkbox" id="nzCycling" name="nzCycling" value="nzActivity">
+                <input type="checkbox" id="nzCycling" name="checkboxNZ[]" value="Cycling" Cycling>
                 <label for="nzCycling">Cycling</label><br>
-                <input type="checkbox" id="nzMuseums" name="nzMuseums" value="nzActivity">
+                <input type="checkbox" id="nzMuseums" name="checkboxNZ[]" value="Museums" Museums>
                 <label for="nzMuseums">Museums</label><br>
-                <input type="checkbox" id="nzBoating" name="nzBoating" value="nzActivity">
+                <input type="checkbox" id="nzBoating" name="checkboxNZ[]" value="Boating" Boating>
                 <label for="nzBoating">Boating</label>
                 <br><br>
             </div>
-            <div id="maldivesActivities" style="display: none;">
+            <div id="maldivesActivities" name="maldivesActivities" style="display: none;">
                 <p>Select Activities:</p>
-                <input type="checkbox" id="mMuseums" name="mMuseums" value="mActivity">
+                <input type="checkbox" id="mMuseums" name="checkboxM[]" value="Museums" Museums>
                 <label for="mMuseums">Museums</label><br>
-                <input type="checkbox" id="mSailing" name="mSailing" value="mActivity">
+                <input type="checkbox" id="mSailing" name="checkboxM[]" value="Sailing" Sailing>
                 <label for="mSailing">Sailing</label><br>
-                <input type="checkbox" id="mBeach" name="mBeach" value="mActivity">
+                <input type="checkbox" id="mBeach" name="checkboxM[]" value="Beach" Beach>
                 <label for="mBeach">Beach</label><br>
-                <input type="checkbox" id="mHiking" name="mHiking" value="mActivity">
+                <input type="checkbox" id="mHiking" name="checkboxM[]" value="Hiking" Hiking>
                 <label for="mHiking">Hiking</label><br>
-                <input type="checkbox" id="mBoating" name="mBoating" value="mActivity">
+                <input type="checkbox" id="mBoating" name="checkboxM[]" value="Boating" Boating>
                 <label for="mBoating">Boating</label>
                 <br><br>
             </div>
-            <div id="veniceActivities" style="display: none;">
+            <div id="veniceActivities" name="veniceActivities" style="display: none;">
                 <p>Select Activities:</p>
-                <input type="checkbox" id="vMuseums" name="vMuseums" value="vActivity">
+                <input type="checkbox" id="vMuseums" name="checkboxV[]" value="Museums" Museums>
                 <label for="vMuseums">Museums</label><br>
-                <input type="checkbox" id="vTheatre" name="vTheatre" value="vActivity">
+                <input type="checkbox" id="vTheatre" name="checkboxV[]" value="Theatre" Theatre>
                 <label for="vTheatre">Theatre</label><br>
-                <input type="checkbox" id="vParks" name="vParks" value="vActivity">
+                <input type="checkbox" id="vParks" name="checkboxV[]" value="Parks and Recreation" Parks and Recreation>
                 <label for="vParks">Parks and Recreation</label><br>
-                <input type="checkbox" id="vCityTours" name="vCityTours" value="vActivity">
+                <input type="checkbox" id="vCityTours" name="checkboxV[]" value="City Tours" City Tours>
                 <label for="vCityTours">City Tours</label>
                 <br><br>
             </div>
-            <div id="cancunActivities" style="display: none;">
+            <div id="cancunActivities" name="cancunActivities" style="display: none;">
                 <p>Select Activities:</p>
-                <input type="checkbox" id="cParks" name="cParks" value="cActivity">
+                <input type="checkbox" id="cParks" name="checkboxC[]" value="Parks and Recreation" Parks and Recreation>
                 <label for="cParks">Parks and Recreation</label><br>
-                <input type="checkbox" id="cBeaches" name="cBeaches" value="cActivity">
+                <input type="checkbox" id="cBeaches" name="checkboxC[]" value="Beaches" Beaches>
                 <label for="cBeaches">Beaches</label><br>
-                <input type="checkbox" id="cBoating" name="cBoating" value="cActivity">
+                <input type="checkbox" id="cBoating" name="checkboxC[]" value="Boating" Boating>
                 <label for="cBoating">Boating</label><br>
-                <input type="checkbox" id="cSnorkeling" name="cSnorkeling" value="cActivity">
+                <input type="checkbox" id="cSnorkeling" name="checkboxC[]" value="Snorkeling" Snorkeling>
                 <label for="cSnorkeling">Snorkeling</label>
                 <br><br>
             </div>
