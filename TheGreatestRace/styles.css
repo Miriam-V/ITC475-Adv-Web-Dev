@@ -1,0 +1,36 @@
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  #Raph {
+    background-color: gray;
+  }
+
+  #Mikey {
+    background-color: gray;
+  }
+
+  #Leo {
+    background-color: gray;
+  }
+
+  #Donnie {
+    background-color: gray;
+  }
+
+  #redStoplight {
+    height: 10em;
+    width: 5em;
+  }
+
+  #Raph1, #Mikey1, #Leo1, #Donnie1, #Raph2, #Mikey2, #Leo2, #Donnie2 {
+    position: absolute;
+  }
+
+
+
+

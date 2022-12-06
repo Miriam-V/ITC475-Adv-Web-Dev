@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Greatest Race</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Miriam Vera">
+        <link rel="stylesheet" type="text/css" href="styles.css"/> 
+    </head>
+    <body>
+        <h1><a href="index.html">The Greatest Race</a></h1>
+        <h3>SELECT TWO RACERS</h3>
+        <form action="action_page.php" method="post" onchange="selectedPlayer()"">
+            <label for="player1">Player 1:</label>
+            <select name="player1" id="player1" onchange="selectedPlayer()">
+              <option value="Raph">Raph</option>
+              <option value="Mikey">Mikey</option>
+              <option value="Leo">Leo</option>
+              <option value="Donnie">Donnie</option>
+            </select>
+            <br><br>
+            <label for="player2">Player 2:</label>
+            <select name="player2" id="player2" onchange="selectedPlayer()">
+              <option value="Raph">Raph</option>
+              <option value="Mikey">Mikey</option>
+              <option value="Leo">Leo</option>
+              <option value="Donnie">Donnie</option>
+            </select>
+            <br><br>
+            <!--
+            <input type="submit" value="Submit" onclick="game.js">
+            -->
+        </form>
+        <br>
+        <br>
+        <h3 id='mainText'>CLICK ON THE STOPLIGHT TO START THE RACE!</h3>
+        <img src="images/redlight.png" alt="red stoplight" id="redStoplight" onclick="startRace()">
+        <img src="images/Raph.webp" alt="winner image" id="winnerImage" style="display:none;" width="200em" height="125em">
+        <br>
+        <br>
+        <img src='images/Raph.webp' alt='Image of Player 1' width='115em' height='115em' id='Raph1' style="display:block;" value="Raph" onchange="selectedPlayer()">
+        <img src='images/Mikey.webp' alt='Image of Player 1' width='100em' height='125em' id='Mikey1' style="display:none;" value="Mikey" onchange="selectedPlayer()">
+        <img src='images/Leo.webp' alt='Image of Player 1' width='125em' height='125em' id='Leo1' style="display:none;" value="Leo" onchange="selectedPlayer()">
+        <img src='images/Donnie.webp' alt='Image of Player 1' width='100em' height='125em' id='Donnie1' style="display:none;" value="Donnie" onchange="selectedPlayer()">
+        <br> <br> <br> <br> <br> <br> <br>
+        <img src='images/Raph.webp' alt='Image of Player 2' width='115em' height='115em' id='Raph2' style="display:block;" value="Raph" onchange="selectedPlayer()">
+        <img src='images/Mikey.webp' alt='Image of Player 2' width='100em' height='115em' id='Mikey2' style="display:none;" value="Mikey" onchange="selectedPlayer()">
+        <img src='images/Leo.webp' alt='Image of Player 2' width='125em' height='125em' id='Leo2' style="display:none;" value="Leo" onchange="selectedPlayer()">
+        <img src='images/Donnie.webp' alt='Image of Player 2' width='100em' height='125em' id='Donnie2' style="display:none;" value="Donnie" onchange="selectedPlayer()">
+        <!--
+        <span class="dot" id="Raph" onclick="myFunction('Raph', 'red')"></span>
+        <span class="dot" id="Mikey" onclick="myFunction('Mikey', 'orange')"></span>
+        <span class="dot" id="Leo" onclick="myFunction('Leo', 'blue')"></span>
+        <span class="dot" id="Donnie" onclick="myFunction('Donnie', 'purple')"></span>
+      -->
+        <!--Javascript reference-->
+        <script src="game.js"></script>
+    </body>
+</html>
